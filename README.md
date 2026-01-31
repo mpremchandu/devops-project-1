@@ -43,15 +43,15 @@ Docker Container (Python App)
 
 ---
 
-##🔹 Project-1: CI/CD with Docker & AWS EC2
-##Workflow
+## 🔹 Project-1: CI/CD with Docker & AWS EC2
+## Workflow
 - Application code is pushed to GitHub
 - GitHub Actions builds a Docker image
 - Image is pushed to DockerHub
 - CI/CD pipeline SSHs into EC2
 - Old container is replaced with a new one
 
-##Key Concepts Demonstrated
+## Key Concepts Demonstrated
 - Containerization
 - Immutable deployments
 - Secure secret management
@@ -59,14 +59,14 @@ Docker Container (Python App)
 - Infrastructure troubleshooting
 
 ---
-##🔹 Project-2: Kubernetes Deployment
-##Workflow
+## 🔹 Project-2: Kubernetes Deployment
+## Workflow
 - Kubernetes Deployment pulls Docker image
 - Multiple replicas are created
 - Service exposes the application
 - Kubernetes handles restarts and failures
 
-##Key Concepts Demonstrated
+## Key Concepts Demonstrated
 - Container orchestration
 - Declarative infrastructure
 - Self-healing pods
