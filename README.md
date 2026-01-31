@@ -36,21 +36,41 @@ Docker Container (Python App)
 - **CI/CD**: GitHub Actions
 - **Containerization**: Docker
 - **Registry**: DockerHub
+- **Container Orchestration**: Kuberenetes(Minikube)
 - **Language**: Python (Flask)
 - **OS**: Linux
 - **Version Control**: Git & GitHub
 
 ---
 
-## 🚀 CI/CD Workflow
-1. Developer pushes code to the `main` branch
-2. GitHub Actions pipeline is triggered
-3. Docker image is built from Dockerfile
-4. Image is pushed to DockerHub
-5. Pipeline connects to EC2 via SSH
-6. Existing container is stopped and removed
-7. New container is started with the latest image
+##🔹 Project-1: CI/CD with Docker & AWS EC2
+##Workflow
+- Application code is pushed to GitHub
+- GitHub Actions builds a Docker image
+- Image is pushed to DockerHub
+- CI/CD pipeline SSHs into EC2
+- Old container is replaced with a new one
 
+##Key Concepts Demonstrated
+- Containerization
+- Immutable deployments
+- Secure secret management
+- Automated deployment
+- Infrastructure troubleshooting
+
+---
+##🔹 Project-2: Kubernetes Deployment
+##Workflow
+- Kubernetes Deployment pulls Docker image
+- Multiple replicas are created
+- Service exposes the application
+- Kubernetes handles restarts and failures
+
+##Key Concepts Demonstrated
+- Container orchestration
+- Declarative infrastructure
+- Self-healing pods
+- Scaling via replicas
 ---
 
 ## 🔐 Security & Best Practices
@@ -60,18 +80,7 @@ Docker Container (Python App)
 - Followed immutable infrastructure principles (replace container instead of modifying)
 
 ---
-
-## 🧪 How to Run Locally
-
-```bash
-docker build -t devops-project-1 .
-docker run -d -p 5000:5000 devops-project-1
-
-##Access the app at:
- http://localhost:5000
-
-##☁️ Deployment
-
-The application is deployed on an AWS EC2 instance and exposed via port 5000.
-http://<EC2_PUBLIC_IP>:5000
-
+## Key Learnings
+- Automation is more reliable than manual deployment
+- Infrastructure failures must be expected and designed for
+- Kubernetes simplifies operational complexity
