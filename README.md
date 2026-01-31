@@ -1,33 +1,31 @@
 # DevOps Project 1 – Automated CI/CD Deployment on AWS
 
 ## 📌 Overview
-This project demonstrates an end-to-end DevOps pipeline where a Python application is containerized using Docker, pushed to DockerHub, and automatically deployed to an AWS EC2 instance using GitHub Actions.
 
-Any code change pushed to the `main` branch triggers a CI/CD pipeline that rebuilds the Docker image and redeploys the application without manual intervention.
-
+Containerized a Python application using Docker, automated deployments with GitHub Actions, and deployed both on AWS EC2 and Kubernetes (Minikube).
 ---
 
 ## 🏗️ Architecture
+
 Local Machine
 |
-| (git push)
+| git push
 v
 GitHub Repository
 |
-| (GitHub Actions CI/CD)
+| GitHub Actions (CI/CD)
 v
 Docker Build & Push
 |
 v
 DockerHub Registry
 |
-| (SSH)
+| SSH
 v
 AWS EC2
 |
 v
-Docker Container (Python App)
-
+Docker Container (Python Application)
 
 ---
 
@@ -36,7 +34,7 @@ Docker Container (Python App)
 - **CI/CD**: GitHub Actions
 - **Containerization**: Docker
 - **Registry**: DockerHub
-- **Container Orchestration**: Kuberenetes(Minikube)
+- **Container Orchestration**: Kubernetes (Minikube)
 - **Language**: Python (Flask)
 - **OS**: Linux
 - **Version Control**: Git & GitHub
@@ -44,14 +42,15 @@ Docker Container (Python App)
 ---
 
 ## 🔹 Project-1: CI/CD with Docker & AWS EC2
-## Workflow
+
+### Workflow
 - Application code is pushed to GitHub
 - GitHub Actions builds a Docker image
 - Image is pushed to DockerHub
 - CI/CD pipeline SSHs into EC2
-- Old container is replaced with a new one
+- Existing container is stopped and replaced with a new one
 
-## Key Concepts Demonstrated
+### Key Concepts Demonstrated
 - Containerization
 - Immutable deployments
 - Secure secret management
@@ -59,28 +58,34 @@ Docker Container (Python App)
 - Infrastructure troubleshooting
 
 ---
-## 🔹 Project-2: Kubernetes Deployment
-## Workflow
-- Kubernetes Deployment pulls Docker image
-- Multiple replicas are created
-- Service exposes the application
-- Kubernetes handles restarts and failures
 
-## Key Concepts Demonstrated
+## 🔹 Project-2: Kubernetes Deployment
+
+### Workflow
+- Kubernetes Deployment pulls the Docker image from DockerHub
+- Multiple replicas of the application are created
+- Service exposes the application to users
+- Kubernetes automatically handles restarts and failures
+
+### Key Concepts Demonstrated
 - Container orchestration
 - Declarative infrastructure
 - Self-healing pods
 - Scaling via replicas
+
 ---
 
 ## 🔐 Security & Best Practices
-- Used SSH key-based authentication for EC2 access
-- Managed sensitive credentials using GitHub Actions Secrets
-- Used DockerHub access tokens instead of passwords
-- Followed immutable infrastructure principles (replace container instead of modifying)
+- SSH key-based authentication for EC2 access
+- Secrets managed using GitHub Actions Secrets
+- DockerHub access tokens used instead of passwords
+- Followed immutable infrastructure principles by replacing containers instead of modifying them
 
 ---
-## Key Learnings
-- Automation is more reliable than manual deployment
-- Infrastructure failures must be expected and designed for
-- Kubernetes simplifies operational complexity
+
+## 📘 Key Learnings
+- Automation is more reliable and repeatable than manual deployment
+- Infrastructure failures should be expected and designed for
+- Kubernetes simplifies operational complexity through self-healing and declarative management
+
+
